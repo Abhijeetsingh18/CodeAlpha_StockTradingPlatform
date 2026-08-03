@@ -7,12 +7,6 @@ import java.nio.file.Paths;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * Simple binary file persistence for the trading platform, using Java's
- * built-in object serialization. Keeps market data and all user accounts
- * / portfolios on disk (data/market.dat, data/users.dat) so state survives
- * between runs.
- */
 public class FileStorage {
     private static final String DATA_DIR = "data";
     private static final String MARKET_FILE = DATA_DIR + File.separator + "market.dat";

@@ -8,10 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-/**
- * Owns all Stock objects and simulates price movement over time
- * (a simple random-walk scaled by each stock's volatility).
- */
+
 public class Market implements Serializable {
     private static final long serialVersionUID = 1L;
 

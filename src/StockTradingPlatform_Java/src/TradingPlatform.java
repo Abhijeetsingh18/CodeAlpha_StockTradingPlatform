@@ -4,10 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * TradingPlatform: the top-level controller class that ties Market, User,
- * Portfolio and Transaction together, and handles persistence via FileStorage.
- */
+
 public class TradingPlatform {
 
     private Market market;
@@ -29,7 +26,7 @@ public class TradingPlatform {
         FileStorage.saveUsers(users);
     }
 
-    // ---- user management --------------------------------------------
+
     public User registerUser(String username, double startingCash) {
         username = username == null ? "" : username.trim();
         if (username.isEmpty()) {
@@ -61,7 +58,6 @@ public class TradingPlatform {
         return currentUser;
     }
 
-    // ---- trading operations (act on current user) ------------------------
     private User requireLogin() {
         if (currentUser == null) {
             throw new IllegalStateException("You must log in first.");
@@ -93,7 +89,6 @@ public class TradingPlatform {
         return txn;
     }
 
-    // ---- market simulation --------------------------------------------
     public void simulateMarketTicks(int ticks) {
         for (int i = 0; i < ticks; i++) {
             market.tick();
@@ -104,7 +99,6 @@ public class TradingPlatform {
         save();
     }
 
-    // ---- reporting -----------------------------------------------------
     public Market getMarket() {
         return market;
     }

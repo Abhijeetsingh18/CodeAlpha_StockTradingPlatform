@@ -5,14 +5,11 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Represents a single tradeable stock: its symbol, name, current price,
- * and a rolling history of price points (used for charts / day-change calc).
- */
+
 public class Stock implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    /** A single (timestamp, price) point in a stock's history. */
+
     public static class PricePoint implements Serializable {
         private static final long serialVersionUID = 1L;
         public final LocalDateTime timestamp;
@@ -27,8 +24,8 @@ public class Stock implements Serializable {
     private final String symbol;
     private final String name;
     private double price;
-    private double volatility;      // used by Market to simulate price moves
-    private double openPrice;       // price at "market open" / session start
+    private double volatility;
+    private double openPrice;
     private final List<PricePoint> priceHistory = new ArrayList<>();
 
     public Stock(String symbol, String name, double price, double volatility) {
@@ -66,7 +63,7 @@ public class Stock implements Serializable {
         return Math.round(v * 100.0) / 100.0;
     }
 
-    // ---- getters -----------------------------------------------------
+
     public String getSymbol() { return symbol; }
     public String getName() { return name; }
     public double getPrice() { return price; }

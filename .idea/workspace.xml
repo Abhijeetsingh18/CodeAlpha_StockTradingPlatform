@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2819ee73-76ad-4fb7-b14a-a8eb8e4698aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/FileStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/FileStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Market.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/TradingPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/TradingPlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockTradingPlatform_Java/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

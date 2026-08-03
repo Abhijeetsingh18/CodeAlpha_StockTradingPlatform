@@ -7,15 +7,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Holds a user's cash balance, stock holdings, average cost basis,
- * full transaction history, and timestamped value snapshots used
- * to track portfolio performance over time.
- */
+
 public class Portfolio implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    /** A single position's unrealized gain/loss vs. its average cost basis. */
     public static class PositionReport implements Serializable {
         private static final long serialVersionUID = 1L;
         public final String symbol;
@@ -38,7 +33,7 @@ public class Portfolio implements Serializable {
         }
     }
 
-    /** A timestamped snapshot of total portfolio value, for performance-over-time tracking. */
+
     public static class Snapshot implements Serializable {
         private static final long serialVersionUID = 1L;
         public final LocalDateTime timestamp;
@@ -64,7 +59,6 @@ public class Portfolio implements Serializable {
         this.cashBalance = startingCash;
     }
 
-    // ---- trading operations ------------------------------------------------
     public Transaction buy(Stock stock, int quantity) {
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be positive.");
@@ -114,7 +108,7 @@ public class Portfolio implements Serializable {
         return txn;
     }
 
-    // ---- valuation -----------------------------------------------------
+
     public double holdingsValue(Market market) {
         double total = 0.0;
         for (Map.Entry<String, Integer> entry : holdings.entrySet()) {
@@ -154,7 +148,7 @@ public class Portfolio implements Serializable {
         return result;
     }
 
-    /** Save a timestamped snapshot of total portfolio value (for performance-over-time tracking). */
+
     public void recordSnapshot(Market market) {
         history.add(new Snapshot(LocalDateTime.now(), round2(cashBalance), holdingsValue(market), totalValue(market)));
         if (history.size() > 1000) {
@@ -166,7 +160,7 @@ public class Portfolio implements Serializable {
         return Math.round(v * 100.0) / 100.0;
     }
 
-    // ---- getters -----------------------------------------------------
+
     public double getCashBalance() { return cashBalance; }
     public Map<String, Integer> getHoldings() { return holdings; }
     public Map<String, Double> getAvgCost() { return avgCost; }

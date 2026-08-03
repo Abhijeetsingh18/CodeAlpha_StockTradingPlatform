@@ -5,9 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
-/**
- * An immutable record of a single BUY or SELL trade.
- */
+
 public class Transaction implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -31,7 +29,7 @@ public class Transaction implements Serializable {
         this.timestamp = LocalDateTime.now();
     }
 
-    // ---- getters -----------------------------------------------------
+
     public String getTxnId() { return txnId; }
     public String getSymbol() { return symbol; }
     public Action getAction() { return action; }

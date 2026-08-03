@@ -4,10 +4,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Command-line interface for the Stock Trading Platform.
- * Run with: java Main
- */
+
 public class Main {
 
     private static final Scanner SCANNER = new Scanner(System.in);

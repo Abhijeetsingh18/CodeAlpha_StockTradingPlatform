@@ -3,9 +3,7 @@ package StockTradingPlatform_Java.src;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * A platform user. Thin wrapper that owns a Portfolio.
- */
+
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
